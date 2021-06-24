@@ -41,4 +41,4 @@ window.fedsMapping = {
   };
 
 const marquee = document.querySelector('.marquee');
-console.log(marquee);
+console.log(marquee, "asd");
