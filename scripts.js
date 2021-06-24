@@ -1,3 +1,13 @@
+function createTag(name, attrs) {
+    const el = document.createElement(name);
+    if (typeof attrs === 'object') {
+      for (let [key, value] of Object.entries(attrs)) {
+        el.setAttribute(key, value);
+      }
+    }
+    return el;
+}
+
 function loadScript(url, callback, type) {
     const $head = document.querySelector('head');
     const $script = createTag('script', { src: url });
