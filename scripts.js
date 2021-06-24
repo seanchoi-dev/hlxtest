@@ -1,3 +1,4 @@
+
 function createTag(name, attrs) {
     const el = document.createElement(name);
     if (typeof attrs === 'object') {
@@ -29,7 +30,7 @@ window.fedsMapping = {
   };
   
   window.fedsConfig = {
-    locale: window.fedsMapping[window.blog.language] || window.blog.language,
+    locale: 'en',
     content: {
       experience: 'blogs/blog-gnav',
     },
