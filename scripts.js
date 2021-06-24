@@ -1,4 +1,4 @@
-export function loadScript(url, callback, type) {
+function loadScript(url, callback, type) {
     const $head = document.querySelector('head');
     const $script = createTag('script', { src: url });
     if (type) {
