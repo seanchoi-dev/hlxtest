@@ -48,7 +48,7 @@ window.fedsMapping = {
   window.adobeid = {
     client_id: 'theblog-helix',
     scope: 'AdobeID,openid',
-    locale: window.blog.language,
+    locale: 'en',
   };
 
 const marquee = document.querySelector('.marquee');
