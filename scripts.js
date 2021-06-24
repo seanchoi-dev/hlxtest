@@ -1,28 +1,17 @@
-import blockLoader from './node_modules/@adobecom/blocks/tools/blockLoader.js';
-blockLoader(config);
-
-const config = {
-    blocks: {
-        'header': {
-            location: '/blocks/header/',
-            styles: 'styles.css',
-            scripts: 'scripts.js',
-        },
-        '.home-hero': {
-            location: '/blocks/home-hero/',
-            styles: 'styles.css',
-        },
-        'footer': {
-            location: '/blocks/footer/',
-            styles: 'styles.css',
-        },
-        'a[href^="https://www.youtube.com"]': {
-            location: '/blocks/embed/',
-            styles: 'youtube.css',
-            scripts: 'youtube.js',
-        }
+export function loadScript(url, callback, type) {
+    const $head = document.querySelector('head');
+    const $script = createTag('script', { src: url });
+    if (type) {
+      $script.setAttribute('type', type);
     }
-};
+    $head.append($script);
+    $script.onload = callback;
+    return $script;
+}
+
+
+loadScript('https://www.adobe.com/etc.clientlibs/globalnav/clientlibs/base/feds.js').id = 'feds-script';
+
 
 // Adobe config
 window.fedsMapping = {
